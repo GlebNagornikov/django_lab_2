@@ -5,4 +5,5 @@ urlpatterns = [
     path("", views.home, name="home"),
     path("vacancies/", views.VacancyListView.as_view(), name="vacancy_list"),
     path("vacancies/<int:pk>/", views.VacancyDetailView.as_view(), name="vacancy_detail"),
+    path("vacancies/add/", views.VacancyCreateView.as_view(), name="vacancy_add"),
 ]
