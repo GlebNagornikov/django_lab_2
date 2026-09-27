@@ -1,0 +1,12 @@
+{% extends "core/base.html" %}
+
+{% block title %}{{ vacancy.title }}{% endblock %}
+
+{% block content %}
+    <h2>{{ vacancy.title }}</h2>
+    <p><strong>Компания:</strong> {{ vacancy.company }}</p>
+    <p><strong>Зарплата от:</strong> {{ vacancy.salary_from }}</p>
+    <p><strong>Удалённая работа:</strong> {% if vacancy.is_remote %}Да{% else %}Нет{% endif %}</p>
+
+    <p><a href="{% url 'vacancy_list' %}">← Назад к списку</a></p>
+{% endblock %}
