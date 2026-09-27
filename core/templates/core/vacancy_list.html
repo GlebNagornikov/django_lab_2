@@ -1,0 +1,23 @@
+{% extends "core/base.html" %}
+
+{% block title %}Список вакансий{% endblock %}
+
+{% block content %}
+    <h2>Список вакансий</h2>
+    <table border="1" cellpadding="5">
+        <tr>
+            <th>Название</th>
+            <th>Компания</th>
+            <th>Зарплата от</th>
+            <th>Удалённо</th>
+        </tr>
+        {% for vacancy in vacancies %}
+        <tr>
+            <td><a href="/vacancies/{{ vacancy.pk }}/">{{ vacancy.title }}</a></td>
+            <td>{{ vacancy.company }}</td>
+            <td>{{ vacancy.salary_from }}</td>
+            <td>{% if vacancy.is_remote %}Да{% else %}Нет{% endif %}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
