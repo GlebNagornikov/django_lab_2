@@ -1,27 +1,27 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>{% block title &}Учет вакансий{% endblock %}</title>
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Учёт вакансий{% endblock %}</title>
+</head>
+<body>
     <header>
-      <h1>Учет вакансий</h1>
-      <nav>
-        <a href="{% url 'home' %}">Главная</a>
-        <a href="/vacancies/">Список вакансий</a>
-        <a href="/admin/">Админ-панель</a>
-      </nav>
+        <h1>Учёт вакансий</h1>
+        <nav>
+            <a href="{% url 'home' %}">Главная</a>
+            <a href="/vacancies/">Список вакансий</a>
+            <a href="/admin/">Админ-панель</a>
+        </nav>
     </header>
 
     <main>
-      {% block content %}
-      {% endblock %}
+        {% block content %}
+        {% endblock %}
     </main>
 
     <footer>
-      <p>Лабораторная работа по Django</p>
+        <p>Лабораторная работа по Django</p>
     </footer>
-  </body>
+</body>
 </html>
